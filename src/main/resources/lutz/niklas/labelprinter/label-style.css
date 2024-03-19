@@ -1,0 +1,5 @@
+#label-style {
+    -fx-font-family: Arial;
+    -fx-font-size: 40;
+    -fx-background-color: linear-gradient(to right top,#ff5252, #FFFFFF);
+}

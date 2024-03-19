@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<AnchorPane prefHeight="647.0" prefWidth="769.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lutz.niklas.labelprinter.AdminWindow">
+    <AnchorPane fx:id="admin" layoutX="33.0" layoutY="24.0" prefHeight="600.0" prefWidth="700.0" style="-fx-background-radius: 25;" styleClass="colorBackground" stylesheets="@color.css">
+        <JFXTextField fx:id="height" layoutX="178.0" layoutY="430.0" prefHeight="25.0" prefWidth="174.0" promptText="Barcodehöhe in mm">
+            <focusColor>
+                <LinearGradient>
+                    <stops>
+                        <Stop>
+                            <color>
+                                <Color red="0.9803921580314636" green="0.8039215803146362" blue="0.40784314274787903" />
+                            </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                            <color>
+                                <Color red="0.9882352948188782" green="0.4627451002597809" blue="0.7019608020782471" />
+                            </color>
+                        </Stop>
+                    </stops>
+                </LinearGradient>
+            </focusColor>
+        </JFXTextField>
+        <JFXTextField fx:id="input" layoutX="178.0" layoutY="400.0" prefHeight="25.0" prefWidth="174.0" promptText="Code">
+            <focusColor>
+                <LinearGradient>
+                    <stops>
+                        <Stop>
+                            <color>
+                                <Color red="0.9803921580314636" green="0.8039215803146362" blue="0.40784314274787903" />
+                            </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                            <color>
+                                <Color red="0.9882352948188782" green="0.4627451002597809" blue="0.7019608020782471" />
+                            </color>
+                        </Stop>
+                    </stops>
+                </LinearGradient>
+            </focusColor>
+        </JFXTextField>
+        <JFXTextField fx:id="width" layoutX="178.0" layoutY="460.0" prefHeight="25.0" prefWidth="174.0" promptText="Barcodebreite in mm">
+            <focusColor>
+                <LinearGradient>
+                    <stops>
+                        <Stop>
+                            <color>
+                                <Color red="0.9803921580314636" green="0.8039215803146362" blue="0.40784314274787903" />
+                            </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                            <color>
+                                <Color red="0.9882352948188782" green="0.4627451002597809" blue="0.7019608020782471" />
+                            </color>
+                        </Stop>
+                    </stops>
+                </LinearGradient>
+            </focusColor>
+        </JFXTextField>
+        <JFXButton fx:id="print" buttonType="RAISED" disable="true" layoutX="386.0" layoutY="450.0" onAction="#adminPrint" prefHeight="41.0" prefWidth="166.0" style="-fx-background-color: white;" text="Drucken" />
+        <JFXButton fx:id="preview" buttonType="RAISED" layoutX="386.0" layoutY="400.0" onAction="#preview" prefHeight="41.0" prefWidth="166.0" style="-fx-background-color: white;" text="Generieren" />
+        <ImageView disable="true" fitHeight="40" fitWidth="40" layoutX="663.0" mouseTransparent="true">
+            <effect>
+                <GaussianBlur radius="1.4" />
+            </effect>
+            <Image url="@exit.png" />
+        </ImageView>
+        <JFXButton layoutX="663.0" onAction="#closeProgram" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: transparent; -fx-border-radius: 5; -fx-border-color: black;" text="X" textFill="TRANSPARENT" />
+        <ImageView fx:id="barcodeViewer" fitHeight="365.0" fitWidth="603.0" layoutX="51.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true" />
+      <CheckBox fx:id="enableEncode" layoutX="365.0" layoutY="509.0" mnemonicParsing="false" styleClass="check-box" stylesheets="@checkbox.css" text="Kodieren" />
+        <CheckBox fx:id="useStandardSize" layoutX="178.0" layoutY="509.0" mnemonicParsing="false" styleClass="check-box" stylesheets="@checkbox.css" text="Standardgröße verwenden" />
+        <CheckBox fx:id="checkValidity" layoutX="457.0" layoutY="509.0" mnemonicParsing="false" styleClass="check-box" stylesheets="@checkbox.css" text="Codeprüfung" />
+    </AnchorPane>
+</AnchorPane>

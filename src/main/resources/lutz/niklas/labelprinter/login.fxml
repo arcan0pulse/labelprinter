@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lutz.niklas.labelprinter.Controller">
+  <AnchorPane fx:id="loginForm" layoutX="145.0" layoutY="76.0" prefHeight="271.0" prefWidth="310.0" style="-fx-background-radius: 25;" styleClass="colorBackground" stylesheets="@color.css">
+    <JFXPasswordField fx:id="password" layoutX="72.0" layoutY="109.0" prefHeight="25.0" prefWidth="174.0" promptText="Passwort">
+      <focusColor>
+        <LinearGradient>
+          <stops>
+            <Stop>
+              <color>
+                <Color red="0.9803921580314636" green="0.8039215803146362" blue="0.40784314274787903" />
+              </color>
+            </Stop>
+            <Stop offset="1.0">
+              <color>
+                <Color red="0.9882352948188782" green="0.4627451002597809" blue="0.7019608020782471" />
+              </color>
+            </Stop>
+          </stops>
+        </LinearGradient>
+      </focusColor>
+    </JFXPasswordField>
+    <ImageView disable="true" fitHeight="40" fitWidth="40" layoutX="270.0" mouseTransparent="true">
+      <effect>
+        <GaussianBlur radius="1.4" />
+      </effect>
+      <Image url="@exit.png" />
+    </ImageView>
+    <JFXButton layoutX="270.0" onAction="#closeProgram" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: transparent; -fx-border-radius: 5; -fx-border-color: black;" text="X" textFill="TRANSPARENT" />
+    <JFXButton fx:id="admin" buttonType="RAISED" layoutX="93.0" layoutY="143.0" onAction="#createAdminWindow" prefHeight="41.0" prefWidth="132.0" style="-fx-background-color: white;" text="Administrator-Login" />
+    <JFXButton fx:id="guest" buttonType="RAISED" layoutX="76.0" layoutY="194.0" prefHeight="41.0" prefWidth="166.0" style="-fx-background-color: white;" text="Ohne Passwort fortfahren" />
+  </AnchorPane>
+</AnchorPane>
